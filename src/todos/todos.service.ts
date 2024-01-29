@@ -52,6 +52,6 @@ export class TodosService {
         // Pour chaque todo dans todos, on test si le todo est différent de l'id passée (le +id transforme l'id d'un string en number)
         const updatedTodos = this.todos.map(t => t.id !== +id ? t: todoToUpdate);
         this.todos = [...updatedTodos];
-        return { updatedTodo: 1, todo: updatedTodos};
+        return { updatedTodo: 1, todo: todoToUpdate};
     }
 }
